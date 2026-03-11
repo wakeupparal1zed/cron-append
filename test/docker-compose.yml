@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  cron-append:
+    build: .
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - FLAG=vsosh{testflag}
+      - CTF_USER=ctf
+      - CTF_PASS=ctf123
+      - SSH_PORT=2222

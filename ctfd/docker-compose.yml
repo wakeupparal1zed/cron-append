@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  service:
+    build: .
+    restart: always
+    expose:
+      - 22
+    networks:
+      - net
+    environment:
+      - FLAG=${FLAG}
+      - CTF_USER=ctf
+      - CTF_PASS=ctf123
+    labels:
+      - owl.proxy=true
+      - owl.proxy.port=22
+      - owl.label.conntype=ssh
+      - owl.ssh.username=ctf
+      - owl.ssh.password=ctf123
+
+networks:
+  net:
+    external:
+      name: ctfd_frp_containers
