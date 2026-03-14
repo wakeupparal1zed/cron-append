@@ -49,12 +49,10 @@ fi
 
 cat >/etc/motd <<'MOTD'
 Добро пожаловать!
-
-что такое хоттабс
 MOTD
 
 cat >"$CTF_HOME"/WELCOME.txt <<'EOF2'
-привет тебе каждый день ночь месяц минуту
+
 EOF2
 chown ${CTF_USER}:${CTF_USER} "$CTF_HOME"/WELCOME.txt
 

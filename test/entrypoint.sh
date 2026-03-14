@@ -49,14 +49,10 @@ fi
 
 cat >/etc/motd <<'MOTD'
 Добро пожаловать!
-
-Цель: получить флаг, используя cron job.
-Ищите скрипт, который выполняется от root и который можно изменить.
 MOTD
 
 cat >"$CTF_HOME"/WELCOME.txt <<'EOF2'
-Добро пожаловать!
-Подсказка: проверьте /etc/crontab и /opt/ctf/cron/.
+
 EOF2
 chown ${CTF_USER}:${CTF_USER} "$CTF_HOME"/WELCOME.txt
 
